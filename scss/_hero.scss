@@ -1,0 +1,6 @@
+.hero{
+    @include flex-center;
+    background-color: $color-oscuro;
+    color: $color-blanco;
+    text-align: center;
+}

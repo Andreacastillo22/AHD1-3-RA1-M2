@@ -1,0 +1,56 @@
+.header {
+    background-color: $color-primario;
+    position: relative;
+
+    .navbar {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        padding: 20px;
+
+        h1 {
+            color: $color-blanco;
+        }
+
+        .menu {
+            display: flex;
+            gap: 20px;
+            list-style: none;
+
+            a {
+                color: $color-blanco;
+                text-decoration: none;
+            }
+
+            @include responsive(600px) {
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                background-color: $color-primario;
+                padding: 20px;
+                gap: 15px;
+                text-align: center;
+
+                &.active {
+                    display: flex;
+                }
+            }
+        }
+
+        .menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 30px;
+            cursor: pointer;
+            color: $color-blanco;
+
+            @include responsive(600px) {
+                display: block;
+            }
+        }
+    }
+}
